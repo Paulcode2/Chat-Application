@@ -8,13 +8,14 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const [err, setErr] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) =>{
     e.preventDefault()
-    const displayName = e.target[0].value
-    const email = e.target[1].value
-    const password = e.target[2].value
-    const file = e.target[3].files[0]
+    const displayName = e.target[0].value;
+    const email = e.target[1].value;
+    const password = e.target[2].value;
+    const file = e.target[3].files[0];
 
 try{
   const res = await createUserWithEmailAndPassword(auth, email, password);
@@ -38,9 +39,9 @@ uploadTask.on('state_changed',
   //       break;
   //   }
   // }, 
-  (error) => {
-    setErr(true)
-  }, 
+  // (error) => {
+  //   setErr(true)
+  // }, 
   () => {
     getDownloadURL(uploadTask.snapshot.ref).then( async (downloadURL) => {
       await updateProfile(res.user, {
