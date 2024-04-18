@@ -32,7 +32,7 @@ try{
             <button>Sign in</button>
             { err && <span className='err'>Incorrect username/password</span> }
         </form>
-        <p>Already an account? <Link to='/register'>Register</Link> </p>
+        <p>Don't have an account? <Link to='/register'>Register</Link> </p>
       </div>
     </div>
   )

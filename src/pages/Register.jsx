@@ -81,9 +81,9 @@ uploadTask.on('state_changed',
             <span>Add image</span>
             </label>
             <button>Sign up</button>
-            {err && <span>Something went wrong</span>}
+            {err && <span className='err'>Something went wrong</span>}
         </form>
-        <p>You have an account? <Link to='/login'>Login</Link> </p>
+        <p>Already have an account? <Link to='/login'>Login</Link> </p>
       </div>
     </div>
   )

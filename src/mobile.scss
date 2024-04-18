@@ -1,0 +1,52 @@
+// Mobile
+@media screen and (max-width:420px){
+    .home{
+        // background: black;
+        // margin: 0 !important;
+        // border-radius: 10px;
+    .container{
+        margin: 0 !important;
+        // background: black !important;
+        border: 2px solid rgb(2, 7, 53);
+        border-radius: 10px;
+        width: 100vw !important;
+        height: 100vh !important;
+        display: flex;
+        overflow: hidden;
+    .sidebar{
+        display: none;
+        // .navbar{
+        //     background-color: black;
+        // }
+    }
+    .chat{
+        // height: 100vh;
+        // margin: 0;
+        // padding: 0;
+        .chatInfo{
+            background-color: black;
+        }
+        .Messages{
+            // background-color: black;
+            padding: .7rem;
+            height: calc(100% - 145px);
+            // overflow: scroll;
+            overflow-y: scroll;
+        }
+        .input{
+            background: black;
+            color: white;
+            padding: 5px;
+            input{
+                padding: 10px;
+                outline: none;
+                border-radius: 10px;
+                &::placeholder{
+                    color: black;
+                }
+            }
+        }
+    }
+}
+}
+}

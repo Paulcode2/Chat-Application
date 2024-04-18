@@ -1,18 +1,24 @@
 // Register
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+// @import url(mobile.scss);
+
+
+
+
 
 body{
     font-family: inter;
 }
 
 .register{
-    background-color: white;
+    background-color: rgba(24, 24, 24, 0.877);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
     .form{
-        background-color: rgb(99, 99, 245);
+        background-color: rgb(0, 0, 0);
         padding: 2rem 5rem;
         border-radius: 10px;
         display: flex;
@@ -52,8 +58,9 @@ body{
                 align-items: center;
                 gap: .5rem;
                 cursor: pointer;
+                color: white;
                 span{
-                    color: rgba(0, 0, 0, 0.856);
+                    color: rgba(255, 255, 255, 0.856);
                 }
             }
             button{
@@ -64,12 +71,19 @@ body{
                 border: 1px;
                 cursor: pointer;
             }
+            .err{
+                color: white;
+            }
 
         }
         p{
-            color: rgba(0, 0, 0, 0.733);
-            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.733);
+            font-size: .8rem;
             margin-top: .6rem;
+            a{
+                text-decoration: none;
+                font-size: 1rem;
+            }
         }
     }
 }
@@ -84,12 +98,13 @@ body{
         border: 1px solid black;
         border-radius: 10px;
         width: 64%;
-        height: 80%;
+        height: 100%;
         display: flex;
         overflow: hidden;
+        // resize: both;
         .sidebar{
             flex: 1;
-            background-color:  rgb(56, 56, 151);
+            background-color:  rgb(46, 46, 46);
             .navbar{
                 display: flex;
                 align-items: center;
@@ -147,6 +162,7 @@ body{
                 gap: .7rem;
                 color: white;
                 cursor: pointer;
+                // background:  rgb(109, 109, 228);;
                 &:hover{
                     background-color:  rgb(36, 36, 99);
                 }
@@ -174,14 +190,17 @@ body{
 
             .chatInfo{
                 height: 50px;
-                background-color: rgb(56, 56, 151);
+                // background-color: rgb(36, 36, 99);
+                background-color: black;
+                border-left: 1px solid rgb(71, 71, 71);
                 padding: .5rem;
                 color: lightgray;
+                gap: .5rem;
                 display: flex;
                 align-items: center;
             }
             .Messages{
-                background-color: #ddddf7;
+                background-color: #282829;
                 padding: .7rem;
                 height: calc(100% - 145px);
                 // overflow: scroll;
@@ -237,7 +256,7 @@ body{
     
             .input{
                 height: 50px;
-                background-color: white;
+                background-color: rgb(2, 2, 2);
                 padding: .7rem;
                 display: flex;
                 justify-content: space-between;
@@ -247,7 +266,8 @@ body{
                     width: 100%;
                     outline: none;
                     font-size: 1rem;
-
+                    color: white;
+                    background-color: black;
                     &::placeholder{
                         color: lightgray;
                     }
@@ -259,6 +279,7 @@ body{
                     label{
                         height: 24px;
                         cursor: pointer;
+                        color: white;
                     }
                     button{
                         border: none;
@@ -267,6 +288,7 @@ body{
                         background-color: rgb(31, 21, 21);
                         cursor: pointer;
                         border-radius: 10px;
+                        border: 1px solid white
                     }
                 }
             }
@@ -274,4 +296,6 @@ body{
 
 
     }
+
 }
+    @import './mobile.scss';
